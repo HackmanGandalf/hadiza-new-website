@@ -1,12 +1,24 @@
 html, body{
     height: 100%;
     margin: 0;
+    width: 100%;
+    
+}
+
+@media screen and (max-width: 750px) {
+    html, body {
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
 }
 
 .background {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    /* background-color: red; */
     /* justify-content: center; */
 }
 
@@ -15,20 +27,26 @@ html, body{
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: fixed;
+    z-index: 1;
     top: 0;
     width: 100%;
     background-color: #ffffff;
 }
 
 .navItem {
-    padding-right: 35px;
+    padding-right: 17.5px;
+    padding-left: 17.5px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
 }
+
+/* .contact {
+    padding-right: 35px;
+} */
 
 .navItem:hover {
     cursor: pointer;
@@ -52,9 +70,12 @@ html, body{
 @media screen and (max-width: 750px) {
     .masthead {
         background: url(img/Picture\ .JPG);
+        min-height: 20rem;
         /* width: 65px;
         height: 40px;
         font-size: 18px; */
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
@@ -114,7 +135,7 @@ html, body{
 
 @media screen and (max-width: 750px) {
     .welcomesubtext {
-        width: 80%;
+        width: 90%;
         font-size: 20px;
     }
 }
@@ -126,6 +147,13 @@ html, body{
     font-size: 15px;
     text-align: center;
     padding-bottom: 25px;
+}
+
+@media screen and (max-width: 750px) {
+    .welcomesubsubtext {
+        width: 90%;
+        font-size: 15px;
+    }
 }
 
 .socialicons {
@@ -160,9 +188,9 @@ html, body{
 
 @media screen and (max-width: 750px) {
     .latestvideo {
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin-bottom: 160px;
+        background: #ffffff;
+        /* background-repeat: no-repeat; */
+        margin-bottom: 50px;
     }
 }
 
@@ -170,7 +198,7 @@ html, body{
     font-family: 'Sedgwick Ave', cursive;
     color: hsl(0, 1%, 21%);
     font-weight: 500;
-    font-size: 65px;
+    font-size: 45px;
     /* padding-top: 20px; */
     transform: rotate(-05deg);
     margin-bottom: 15px;
@@ -209,7 +237,7 @@ html, body{
 .youtubevideo {
     aspect-ratio: 16 / 9;
     width: 840px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     padding-left: 40px;
 }
 
