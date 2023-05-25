@@ -9,8 +9,8 @@ sheet_endpoint = os.environ.get('sheet_endpoint')
 FROM_EMAIL =  os.environ.get('FROM_EMAIL')
 PASSWORD = os.environ.get('PASSWORD')
 TO_EMAIL = os.environ.get("TO_EMAIL")
-EMAIL_DATABASE = "https://api.sheety.co/dca7e824c74318dc6864df71ab8952d0/signupForm/emails" #os.environ.get('EMAIL_DATABASE')
-PROMPTSDOWNLOADEMAILDATABASE = "https://api.sheety.co/dca7e824c74318dc6864df71ab8952d0/signupForm/journalingPromptsDownloads" #os.environ.get('PROMPTSDOWNLOADEMAILDATABASE')
+EMAIL_DATABASE = os.environ.get('EMAIL_DATABASE')
+PROMPTSDOWNLOADEMAILDATABASE = os.environ.get('PROMPTSDOWNLOADEMAILDATABASE')
 app = Flask(__name__)
 
 @app.route('/')
@@ -151,7 +151,7 @@ def contactform():
     # print(subject)
 
     
-    with smtplib.SMTP("smtp.mail.yahoo.com") as connection:
+    with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.ehlo()
         connection.starttls()
         connection.login(user=FROM_EMAIL, password=PASSWORD)
