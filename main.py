@@ -157,12 +157,12 @@ def contactform():
         connection.login(user=FROM_EMAIL, password=PASSWORD)
         connection.sendmail(from_addr=FROM_EMAIL, to_addrs=email, msg=f"Subject: {subject}\n\nFirst Name: {firstname}\Last Name: {lastname}\nEmail: {email}\nMessage: {message}")
 
-    return redirect(url_for('contact'))
+
     
     # result = response.text
     # print(result)
 
-    # return redirect(url_for('success'))
+    return redirect(url_for('success'))
 
 
 @app.route('/newsletter')
