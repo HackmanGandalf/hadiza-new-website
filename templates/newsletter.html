@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyfully Hadiza</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Satisfy&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    
+</head>
+<body class="background">
+
+    <nav class="navbar">
+        <div class="navItem">
+            <a href="{{url_for ('home') }}" class="navlink">HOME</a>
+        </div>
+        <div class="navItem">
+            <a href="{{url_for ('about') }}" class="navlink">ABOUT</a>
+        </div>
+        <div class="navItem">
+            <a href="#" class="navlink">SHOP</a>
+        </div>
+        <div class="navItem">
+            <a href="{{url_for ('contact') }}" class="navlink contact">CONTACT</a>
+        </div>
+    </nav>
+    
+    <div class="newsletter">
+        <div class="newsletterwelcome">
+            <p class="keepintouch">Stay connected!</p>
+            <p class="touchsubtext">Join my newsletter for in-depth  glimpses into my personal journey, unveiled secrets, stories and strategies to help you become the best “You” as well as valuable tips and tricks to unlock your full potential. It's time to become the best version of yourself.</p>
+        </div>
+
+        <div class="signupform">
+            <p class="signupformheader">Newsletter Signup!</p>
+            <form action="{{ url_for('form') }}" method="post">
+                <div class="inputfield">
+                    <input type="text" placeholder="First Name" class="formfield" name="firstname">
+                </div>
+                <div class="inputfield">
+                    <input type="text" placeholder="Last Name" class="formfield" name="lastname">
+                </div>
+                <div class="inputfield">
+                    <input type="text" placeholder="Email Address" class="formfield" name="email">
+                </div>
+
+                <div class="signup">
+                    <input type="submit" value="SIGN UP" class="signupbutton">
+                </div>
+            </form>
+
+            
+
+        </div>
+
+    </div>
+
+    
+    <div class="abovehr">
+        <div class="footerlink">
+            <div class="footerlinkItem">
+                <a href="{{ url_for ('home') }}" class="itemfooterlink">HOME</a>
+            </div>
+            <div class="footerlinkItem">
+                <a href="{{ url_for ('about') }}" class="itemfooterlink">ABOUT</a>
+            </div>
+            <div class="footerlinkItem">
+                <a href="#" class="itemfooterlink">SHOP</a>
+            </div>
+            <div class="footerlinkItem">
+                <a href="{{ url_for ('contact') }}" class="itemfooterlink">CONTACT</a>
+            </div>
+        </div>
+
+        <div class="footersocial">
+            <a href="https://youtube.com/@JoyfullyHadiza"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/joyfullyhadiza"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/joyfully_hadiza_"><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="belowhr">
+        <div class="hrline"></div>
+
+        <p class="copyright">© 2023 Joyfully Hadiza</p>
+    </div>
+        
+        
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
