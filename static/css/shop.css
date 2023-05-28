@@ -471,3 +471,9 @@ input {
     padding-right: 50px; */
     
 }
+
+@media screen and (max-width: 750px) {
+    .picture {
+        width: 100%;
+    }
+}
