@@ -22,7 +22,7 @@
             <a href="{{url_for ('about') }}" class="navlink">ABOUT</a>
         </div>
         <div class="navItem">
-            <a href="#" class="navlink">SHOP</a>
+            <a href="{{url_for ('shop') }}" class="navlink">SHOP</a>
         </div>
         <div class="navItem">
             <a href="{{url_for ('contact') }}" class="navlink contact">CONTACT</a>
@@ -34,20 +34,20 @@
     </div>
 
     <div class="welcome">
-        <p class="welcometext">Joyfully Hadiza</p>
-        <p class="welcomesubtext">Welcome to my personal development hub, a space where self-discovery intertwines with boundless creativity. Immerse yourself in a world of inspiration as you explore my collection designed to unlock your true potential.</p>
-        <p class="welcomesubsubtext">Feel free to sign up for my newsletter to receive exclusive updates, valuable insights, and additional resources for your personal development journey. Don't forget to explore my blog and shop for even more inspiration, helpful articles, and curated products to support your growth.</p>
+        <p class="welcometext">Welcome!</p>
+        <p class="welcomesubtext">At shop Joyfully Hadiza, uncover transformative resources that will serve as guiding beacons, illuminating your path towards personal growth and empowerment.</p>
+        <!-- <p class="welcomesubsubtext">Feel free to sign up for my newsletter to receive exclusive updates, valuable insights, and additional resources for your personal development journey. Don't forget to explore my blog and shop for even more inspiration, helpful articles, and curated products to support your growth.</p> -->
         
-        <div class="socialicons">
+        <!-- <div class="socialicons">
             <a href="https://youtube.com/@JoyfullyHadiza"><i class="welcomeicons bi-youtube"></i></a>
             <a href="https://www.facebook.com/joyfullyhadiza"><i class="welcomeicons bi-facebook"></i></a>
             <a href="https://instagram.com/joyfully_hadiza_"><i class="welcomeicons bi-instagram"></i></a>
-        </div>
+        </div> -->
 
     </div>
 
 
-    <div class="latestvideo">
+    <!-- <div class="latestvideo">
         <p class="newestVideo">supercharge your year <br> with this video</p>
         
         <button class="watchmore">
@@ -64,35 +64,46 @@
         <button class="shopnow">
             SHOP NOW!
         </button>
-    </div>
+    </div> -->
+
     
     <div class="newsletter">
+        
+        <div class="aboutpicture">
+            <img src="static/img/Hadiza Double Book Cover.png" class="picture" alt="">
+        </div>
+
         <div class="newsletterwelcome">
-            <p class="keepintouch">Stay connected!</p>
+            <p class="keepintouch">Let's Plan 2023 Together</p>
             <p class="touchsubtext">Join my newsletter for in-depth  glimpses into my personal journey, unveiled secrets, stories and strategies to help you become the best “You” as well as valuable tips and tricks to unlock your full potential. It's time to become the best version of yourself.</p>
+            <div class="signup">
+                <a href="https://paystack.com/buy/lets-plan-2023-ootvha"><input type="submit" value="ORDER NOW" class="ordernow"></a>
+                <input type="submit" value="READ REVIEWS" class="readreviews">
+                
+            </div>
         </div>
 
-        <div class="signupform">
-            <p class="signupformheader">Newsletter Signup!</p>
-            <form action="{{ url_for('form') }}" method="post">
-                <div class="inputfield">
-                    <input type="text" placeholder="First Name" class="formfield" name="firstname">
-                </div>
-                <div class="inputfield">
-                    <input type="text" placeholder="Last Name" class="formfield" name="lastname">
-                </div>
-                <div class="inputfield">
-                    <input type="text" placeholder="Email Address" class="formfield" name="email">
-                </div>
+        
 
-                <div class="signup">
-                    <input type="submit" value="SIGN UP" class="signupbutton">
-                </div>
-            </form>
+    </div>
 
-            
-
+    <div class="newsletter">
+        
+        <div class="aboutpicture">
+            <img src="static/img/journalling prompts.png" class="picture" alt="">
         </div>
+
+        <div class="newsletterwelcome">
+            <p class="keepintouch">Journalling Prompts</p>
+            <p class="touchsubtext">Join my newsletter for in-depth  glimpses into my personal journey, unveiled secrets, stories and strategies to help you become the best “You” as well as valuable tips and tricks to unlock your full potential. It's time to become the best version of yourself.</p>
+            <div class="signup">
+                <a href="https://paystack.com/buy/lets-plan-2023-ootvha"><input type="submit" value="ORDER NOW" class="ordernow"></a>
+                <input type="submit" value="READ REVIEWS" class="readreviews">
+                
+            </div>
+        </div>
+
+        
 
     </div>
 
