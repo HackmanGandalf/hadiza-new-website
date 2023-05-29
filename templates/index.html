@@ -74,15 +74,17 @@
 
         <div class="signupform">
             <p class="signupformheader">Newsletter Signup!</p>
-            <form action="{{ url_for('form') }}" method="post">
+            <form action="{{ url_for('form') }}" method="post" onsubmit="validateNewsletterForm(event)">
                 <div class="inputfield">
-                    <input type="text" placeholder="First Name" class="formfield" name="firstname">
+                    <div id="firstnamevalidationMessage"></div>
+                    <input type="text" placeholder="First Name" class="formfield" name="firstname" id="firstname">
                 </div>
                 <div class="inputfield">
-                    <input type="text" placeholder="Last Name" class="formfield" name="lastname">
+                    <input type="text" placeholder="Last Name" class="formfield" name="lastname" id="lastname">
                 </div>
                 <div class="inputfield">
-                    <input type="text" placeholder="Email Address" class="formfield" name="email">
+                    <div id="emailvalidationMessage"></div>
+                    <input type="text" placeholder="Email Address" class="formfield" name="email" id="email">
                 </div>
 
                 <div class="signup">
@@ -129,6 +131,6 @@
         
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="index.js"></script>
+    <script src="static/js/index.js"></script>
 </body>
 </html>

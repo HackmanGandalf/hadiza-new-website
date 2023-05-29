@@ -562,3 +562,21 @@ input {
     font-size: 15;
     color: hsl(0, 1%, 44%);
 }
+
+#firstnamevalidationMessage {
+    color: red;
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    padding-top: 5px;
+  }
+
+#emailvalidationMessage {
+    color: red;
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    padding-top: 5px;
+  }

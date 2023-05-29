@@ -40,38 +40,42 @@
             
             <div class="contactform">
                 
-                <form action="{{ url_for ('contactform')}}" method="post">
+                <form action="{{ url_for ('contactform')}}" method="post" onsubmit="validateContactForm(event)">
                     <div class="namerequired">
                         <p class="Name">Name </p> <p class="required">(required)</p>
+                        <div id="firstnamevalidationMessage"></div>
                     </div>
                     
                     <div class="inputfield">
-                        <input type="text" placeholder="First Name" class="firstnameformfield" name="firstname">
+                        <input type="text" placeholder="First Name" class="firstnameformfield" name="firstname" id="firstname">
                         <input type="text" placeholder="Last Name" class="lastnameformfield" name="lastname">
                     </div>
                     
                     <div class="namerequired">
                         <p class="Name">Email </p> <p class="required">(required)</p>
+                        <div id="emailvalidationMessage"></div>
                     </div>
                     <div class="inputfield">
-                        <input type="text" placeholder="Email Address" class="emailformfield" name="email">
+                        <input type="text" placeholder="Email Address" class="emailformfield" name="email" id="email">
                     </div>
 
                     <div class="namerequired">
                         <p class="Name">How can I help you today? </p> <p class="required">(required)</p>
+                        <div id="checkboxvalidationMessage"></div>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" class="inquiryformfield" name="generalInquiry"> <p class="checkboxtext">General Inquiry</p>
+                        <input type="checkbox" class="inquiryformfield" name="generalInquiry" id="generalInquiry"> <p class="checkboxtext">General Inquiry</p>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" class="inquiryformfield" name="sponsorships"> <p class="checkboxtext">Sponsorships/Working with Hadiza</p>
+                        <input type="checkbox" class="inquiryformfield" name="sponsorships" id="sponsorships"> <p class="checkboxtext">Sponsorships/Working with Hadiza</p>
                     </div>
 
                     <div class="namerequired">
                         <p class="Name">Tell me more! </p> <p class="required">(required)</p>
+                        <div id="messagevalidationMessage"></div>
                     </div>
                     <div class="inputfield">
-                        <textarea type="text"  class="messageformfield" name="message"> </textarea>
+                        <textarea type="text"  class="messageformfield" name="message" id="message"></textarea>
                     </div>
 
                     <div class="send">
@@ -119,6 +123,6 @@
         
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="index.js"></script>
+    <script src="static/js/index.js"></script>
 </body>
 </html>
