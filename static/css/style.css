@@ -314,6 +314,11 @@ html, body{
     color: #black;
 }
 
+.shopnowbutton {
+    color: #black;
+    text-decoration: none;
+}
+
 .newsletter {
     display: flex;
     flex-direction: row;
