@@ -150,7 +150,7 @@ def contactform():
         connection.ehlo()
         connection.starttls()
         connection.login(user=FROM_EMAIL, password=PASSWORD)
-        connection.sendmail(from_addr=FROM_EMAIL, to_addrs=email, msg=f"Subject: {subject}\n\nFirst Name: {firstname}\Last Name: {lastname}\nEmail: {email}\nMessage: {message}")
+        connection.sendmail(from_addr=FROM_EMAIL, to_addrs=TO_EMAIL, msg=f"Subject: {subject}\n\nFirst Name: {firstname}\nLast Name: {lastname}\nEmail: {email}\nMessage: {message}")
 
     return redirect(url_for('success'))
 
