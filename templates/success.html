@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success - JoyfullyHadiza</title>
+    <title>Success! - JoyfullyHadiza</title>
+    <link rel="icon" type="image/png" href="static/img/apple-touch-icon.png">
     <link rel="stylesheet" href="static/css/aboutstyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,7 +58,7 @@
                 <a href="{{ url_for ('about') }}" class="itemfooterlink">ABOUT</a>
             </div>
             <div class="footerlinkItem">
-                <a href="#" class="itemfooterlink">SHOP</a>
+                <a href="{{ url_for ('shop') }}" class="itemfooterlink">SHOP</a>
             </div>
             <div class="footerlinkItem">
                 <a href="{{ url_for ('contact') }}" class="itemfooterlink">CONTACT</a>
@@ -80,6 +81,6 @@
         
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="index.js"></script>
+    <script src="static/js/index.js"></script>
 </body>
 </html>
