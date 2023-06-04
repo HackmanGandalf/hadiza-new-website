@@ -83,6 +83,10 @@ By signing up, expect my monthly Newsletter where I share: <br><br>
 
 Thank you for making me a part of your journey… <br><br>
 
+As a welcome package, I have curated some journaling prompts for you. You can download it by clicking on the button below.<br><br>
+
+<a class="btn btn-primary" href="https://joyfullyhadiza.com/6643467cc69a54abf6180732617a232ca54b436d" role="button">Download Journaling Prompts</a><br><br>
+
 until next time ✌️<br><br>
 
 Love, <br>
@@ -113,7 +117,7 @@ JoyfullyHadiza
 
 @app.route('/6643467cc69a54abf6180732617a232ca54b436d')
 def download_journaling_prompts():
-    return render_template("shop.html")
+    return send_from_directory("static", path="files/joyfully hadiza journalling prompt.pdf", as_attachment=True)
 
 @app.route('/4c4554275320504c414e203230323320544f474554484552')
 def download_plan_2023():
@@ -165,15 +169,13 @@ def plan_2023():
     
     return render_template("shop.html")
 
-@app.route('/journaling_prompts')
+@app.route('/journalling_prompts')
 def journaling_prompts():
     
     return render_template('shop.html')
 
-@app.route('/prompts_download', methods=["POST", ])
+@app.route('/prompts_download')
 def download_prompts_form():
-    
-    
     return render_template('shop.html')
 
 
