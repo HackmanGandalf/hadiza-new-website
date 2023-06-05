@@ -586,3 +586,40 @@ input {
     font-style: italic;
     padding-top: 5px;
   }
+
+  .aboutpicture {
+    /* background: url(img/IMG-9766.jpg); */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #F2B6A0; */
+    
+}
+
+@media screen and (max-width: 750px) {
+    .aboutpicture {
+        width: 90%;
+        margin: 0px;
+        
+    }
+}
+
+.picture {
+    width: 70%;
+    padding-top: 120px;
+    padding-bottom: 30px;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+    
+}
+
+@media screen and (max-width: 750px) {
+    .picture {
+        width: 100%;
+        margin: 0px;
+    }
+}
