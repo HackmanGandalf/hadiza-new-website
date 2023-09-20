@@ -150,11 +150,11 @@ def contactform():
     else:
         subject = "No subject"
     
-    with smtplib.SMTP("smtp.gmail.com") as connection:
-        connection.ehlo()
-        connection.starttls()
-        connection.login(user=FROM_EMAIL, password=PASSWORD)
-        connection.sendmail(from_addr=FROM_EMAIL, to_addrs=TO_EMAIL, msg=f"Subject: {subject}\n\nFirst Name: {firstname}\nLast Name: {lastname}\nEmail: {email}\nMessage: {message}")
+    # with smtplib.SMTP("smtp.gmail.com") as connection:
+    #     connection.ehlo()
+    #     connection.starttls()
+    #     connection.login(user=FROM_EMAIL, password=PASSWORD)
+    #     connection.sendmail(from_addr=FROM_EMAIL, to_addrs=TO_EMAIL, msg=f"Subject: {subject}\n\nFirst Name: {firstname}\nLast Name: {lastname}\nEmail: {email}\nMessage: {message}")
 
     return redirect(url_for('success'))
 
