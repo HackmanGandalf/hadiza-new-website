@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Satisfy&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
 </head>
 <body class="background">
@@ -91,12 +92,14 @@
                     <input type="text" placeholder="Email Address" class="formfield" name="email" id="email">
                 </div>
 
+                <div class="g-recaptcha" data-sitekey="6LeAYdwnAAAAAKG1GXCXvSvyk2ZLWh9GSg3hjt2s" data-callback="verifyCaptcha"></div>
+                <div id="g-recaptcha-error"></div>
+                
                 <div class="signup">
                     <input type="submit" value="SIGN UP" class="signupbutton">
                 </div>
             </form>
 
-            
 
         </div>
 
@@ -136,5 +139,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="static/js/index.js"></script>
+    
 </body>
 </html>
+
+
+<head>
+    
