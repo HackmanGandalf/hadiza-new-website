@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - JoyfullyHadiza</title>
+    <link rel="icon" type="image/png" href="static/img/apple-touch-icon.png">
+	<meta name="description" content="Write to me!">
+	<meta name="keywords" content="Personal Development| Intentional living| Goal-Setting| Journalling">
+    <meta name="author" content="Hadiza Umar">
+    <link rel="stylesheet" href="static/css/contactstyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Satisfy&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    
+</head>
+<body class="background">
+
+    <nav class="navbar">
+        <div class="navItem">
+            <a href="{{url_for ('home') }}" class="navlink">HOME</a>
+        </div>
+        <div class="navItem">
+            <a href="{{url_for ('about') }}" class="navlink">ABOUT</a>
+        </div>
+        <div class="navItem">
+            <a href="{{url_for ('shop') }}" class="navlink">SHOP</a>
+        </div>
+        <div class="navItem">
+            <a href="{{url_for ('contact') }}" class="navlink contact">CONTACT</a>
+        </div>
+    </nav>
+    
+    <div class="contact">
+
+        <div class="contactpicture">
+            <img src="static/img/IMG-9766.png" class="picture" alt="">
+        </div>
+
+        <div class="contactbox">
+            <p class="contactheader">Contact</p>
+            
+            <div class="contactform">
+                
+                <form action="{{ url_for ('contactform')}}" method="post" onsubmit="validateContactForm(event)">
+                    <div class="namerequired">
+                        <p class="Name">Name </p> <p class="required">(required)</p>
+                        <div id="firstnamevalidationMessage"></div>
+                    </div>
+                    
+                    <div class="inputfield">
+                        <input type="text" placeholder="First Name" class="firstnameformfield" name="firstname" id="firstname">
+                        <input type="text" placeholder="Last Name" class="lastnameformfield" name="lastname">
+                    </div>
+                    
+                    <div class="namerequired">
+                        <p class="Name">Email </p> <p class="required">(required)</p>
+                        <div id="emailvalidationMessage"></div>
+                    </div>
+                    <div class="inputfield">
+                        <input type="text" placeholder="Email Address" class="emailformfield" name="email" id="email">
+                    </div>
+
+                    <div class="namerequired">
+                        <p class="Name">How can I help you today? </p> <p class="required">(required)</p>
+                        <div id="checkboxvalidationMessage"></div>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" class="inquiryformfield" name="generalInquiry" id="generalInquiry"> <p class="checkboxtext">General Inquiry</p>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" class="inquiryformfield" name="sponsorships" id="sponsorships"> <p class="checkboxtext">Sponsorships/Working with Hadiza</p>
+                    </div>
+
+                    <div class="namerequired">
+                        <p class="Name">Tell me more! </p> <p class="required">(required)</p>
+                        <div id="messagevalidationMessage"></div>
+                    </div>
+                    <div class="inputfield">
+                        <textarea type="text"  class="messageformfield" name="message" id="message"></textarea>
+                    </div>
+                    
+                    <div class="g-recaptcha" data-sitekey="6LeAYdwnAAAAAKG1GXCXvSvyk2ZLWh9GSg3hjt2s" data-callback="verifyCaptcha"></div>
+                    <div id="g-recaptcha-error"></div>
+
+                    <div class="send">
+                        <input type="submit" value="SEND" class="sendbutton">
+                    </div>
+                </form>
+                
+    
+            </div>
+
+            
+        </div>
+    </div>
+
+    
+    <div class="abovehr">
+        <div class="footerlink">
+            <div class="footerlinkItem">
+                <a href="{{ url_for ('home') }}" class="itemfooterlink">HOME</a>
+            </div>
+            <div class="footerlinkItem">
+                <a href="{{ url_for ('about') }}" class="itemfooterlink">ABOUT</a>
+            </div>
+            <div class="footerlinkItem">
+                <a href="{{ url_for ('shop') }}" class="itemfooterlink">SHOP</a>
+            </div>
+            <div class="footerlinkItem">
+                <a href="{{ url_for ('contact') }}" class="itemfooterlink">CONTACT</a>
+            </div>
+        </div>
+
+        <div class="footersocial">
+            <a href="https://youtube.com/@JoyfullyHadiza"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/joyfullyhadiza"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/joyfully_hadiza_"><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="belowhr">
+        <div class="hrline"></div>
+
+        <p class="copyright">© 2023 Joyfully Hadiza</p>
+    </div>
+        
+        
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="static/js/index.js"></script>
+</body>
+</html>
