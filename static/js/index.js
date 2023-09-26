@@ -6,6 +6,8 @@ var plan2023readreviews = document.querySelector('.plan2023readreviews');
 var plan2023Reviews = document.getElementById('plan2023Reviews');
 var journallingpromptsreadreviews = document.querySelector('.journallingpromptsreadreviews');
 var journallingReviews = document.getElementById('journallingReviews');
+var captchaMessage = document.getElementById('g-recaptcha-error');
+var recaptcha_response = '';
 
 
 function validateNewsletterForm(event) {
@@ -31,6 +33,10 @@ function validateNewsletterForm(event) {
         emailvalidationMessage.style.display = 'block';
         event.preventDefault()
         return false
+    } else if(recaptcha_response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+        event.preventDefault()
+        return false;
     }
 
     firstnamevalidationMessage.style.display = 'none';
@@ -72,6 +78,10 @@ function validateContactForm(event) {
         messagevalidationMessage.style.display = 'block';
         event.preventDefault()
         return false
+    } else if(recaptcha_response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+        event.preventDefault()
+        return false;
     }
 
     firstnamevalidationMessage.style.display = 'none';
@@ -81,6 +91,11 @@ function validateContactForm(event) {
     form.reset();
     return true
 
+}
+
+function verifyCaptcha(token) {
+    recaptcha_response = token;
+    document.getElementById('g-recaptcha-error').innerHTML = '';
 }
 
 
@@ -106,6 +121,17 @@ journallingpromptsreadreviews.addEventListener('click', function(event) {
         journallingReviews.style.display = 'block';
     } else {
         journallingReviews.style.display = 'none';
+    }
+});
+
+
+signupbutton.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const captchaResponse = grecaptcha.getResponse();
+
+    if (!captchaResponse.length > 0) {
+        throw new Error("Captcha not complete");
     }
 });
 
